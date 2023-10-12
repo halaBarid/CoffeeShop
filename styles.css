@@ -591,3 +591,68 @@ footer p {
 .about .our-shop .text {
     margin-left: 20px;
 }
+
+/* Menu */
+
+.menu {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.menu .menu-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: var(--main-transparent);
+    width: 50%;
+    border-radius: 50px;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.menu .menu-buttons button {
+    background-color: transparent;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 17px 20px;
+    border: none;
+    transition: .47s;
+}
+
+.menu .menu-buttons button:hover {
+    background-color: var(--main-brown);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.menu .menu-buttons .active{
+    background-color: var(--main-brown);
+    border-radius: 50px;
+}
+
+.menu h1 {
+    margin-top: 30px;
+}
+
+.menu .coffee-menu {
+    margin-top: 60px;
+}
+
+.menu .coffee-menu .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .coffee-menu .col {
+    max-width: 300px;
+    margin: 0 90px;
+}
+
+.menu .coffee-menu img {
+    max-width: 100%;
+    height: auto;
+}
