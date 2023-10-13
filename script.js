@@ -204,4 +204,3 @@ closeSearchPopup.addEventListener("click", () => {
     console.log("close")
 })
 
-
