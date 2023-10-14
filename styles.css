@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;200;300;400;500;600;700;800&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Cairo:wght@200;400;500;600;700;800;900&family=Comic+Neue:wght@300;400;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&family=Urbanist:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@100;200;300;400;500;600;700;800&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Cairo:wght@200;400;500;600;700;800;900&family=Comic+Neue:wght@300;400;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&family=Urbanist:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
 :root {
     --primary-color: #290b0b;
     --secondary-color: #fadddd;
@@ -39,7 +40,7 @@ body {
     display: none;
 }
 
-/* homes */
+/*---------------------------------------- home ----------------------------------------*/
 
 
 .navbar {
@@ -112,6 +113,7 @@ body {
     z-index: 100;
     display: none;
 }
+
 .social-icons-dropdown i {
     font-size: 24px; 
     cursor: pointer;
@@ -194,10 +196,6 @@ body {
 
 }
 
-    /* .home .choices .description {
-        width: 500px;
-    } */
-
 .home .choices .description h4 {
     margin-bottom: 50px;
     color: var(--main-brown);
@@ -215,15 +213,14 @@ body {
 }
 
 .home .choices img {
-    max-width: 100%; /* Set the maximum width of the container */
-    /* height: auto; Allow the height to adjust automatically */
+    max-width: 100%;
     height: 350px;
     border-radius: 20px;
 }
 
 .Menu-of-coffee .threetypes {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 350px;
     margin-top: 19px;
@@ -240,17 +237,17 @@ body {
     border-radius: 50%;
 }
 
-.Menu-of-coffee .menu {
+.Menu-of-coffee .menu-button {
     margin-top: 14px;
     font-size: 20px;
 }
 
-.Menu-of-coffee .menu a {
+.Menu-of-coffee .menu-button a {
     color: var(--secondary-color);
     padding-right: 10px;
 }
 
-.Menu-of-coffee .menu i {
+.Menu-of-coffee .menu-button i {
     cursor: pointer;
 }
 
@@ -376,6 +373,14 @@ footer p {
 
 @media (max-width: 1024px) {
 
+    .home .welcome h1 {
+        text-align: center;
+    }
+
+    .home .choices {
+        padding: 30px;
+    }
+
     .our-store .row {
         display: flex;
         flex-direction: column ;
@@ -383,11 +388,13 @@ footer p {
 
     .our-store .row .col {
         margin-top: 10%;
+        width: 400px;
+        height: auto;
     }
 
     .our-store .row .col img {
-        width: 400px;
-        height: 400px;
+        max-width: 100%;
+        height: 700px;
     }
 
     .our-store .row .col span {
@@ -405,14 +412,15 @@ footer p {
 
     .home .welcome h3{
         font-size: 14px;
+        margin-top: 20px;
     }
 
     .home .welcome h1 {
         font-size: 40px;
-    }
+    }   
 
     .home .choices .description {
-        margin: 0 0 0 30px;
+        padding-left: 10px; 
     }
 
     .home .choices .description h4 {
@@ -436,6 +444,36 @@ footer p {
     }
   }
 
+  @media (max-width: 553px) {
+    .nav-links {
+        display: none;
+    }
+
+    .fa-bars {
+        display: contents;
+        padding-left: 10px;
+    }
+    
+    .bar-nav-links {
+        position: absolute;
+        top: 110px;
+        right: 0px;
+        width: 100%;
+        text-align: center;
+        background-color: var(--main-grouna);
+        display: none;
+        z-index:1000;
+    }
+    
+    .open {
+        display: block;
+    }
+    
+    .bar-nav-links a {
+        color: var(--secondary-color);
+    }
+  }
+
 @media (max-width: 425px) {
 
     .logo img {
@@ -443,6 +481,17 @@ footer p {
         height: 70px;
         margin: 12px 0 0 0px;
     }
+
+
+    .close-search-popup {
+        position: absolute;
+        top: 6%;
+        left: 87%;
+        color: var(--main-grouna);
+        font-size: 30px;
+        cursor: pointer;
+    }
+
     .nav-links {
         display: none;
     }
@@ -498,17 +547,18 @@ footer p {
         margin-top: 30px;
     }
 
-
     .our-store h1 {
         font-size: 15px;
+        margin: auto 10px;
     }
 
     .our-store .row .col {
         padding: 30px 20px;
+        max-width: 70%;
     }
 
     .our-store .row .col img {
-        width: 230px;
+        width: 100%;
         height: 230px;
     }
 
@@ -552,9 +602,19 @@ footer p {
 
     .home .choices .description {
         text-align: center;
-        margin: auto;
+        margin: auto; 
+        padding: 0 8px 0;
+        max-width: 100%;
     }
 
+    .home .choices .description h1 {
+        font-size: 23px;
+    }
+
+    .home .choices .description p {
+        font-size: 10px;
+        width: 100%;
+    }
 
     .Menu-of-coffee .threetypes {
         width: auto; 
@@ -568,6 +628,10 @@ footer p {
         padding: 0 10px;
     }
 
+    .our-store .row .col {
+        width: auto;
+    }
+
     footer .nav a {
         padding: 0 10px;
         font-size: 14px;
@@ -579,15 +643,20 @@ footer p {
     }
 }
 
-/* About */
+/*---------------------------------------- About ----------------------------------------*/
 
 .about .our-shop {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: var(--main-grouna);
+    opacity: .8;
 }
 
+.about .our-shop .about-img {
+    max-width: 500px;
+}
 
 .about .our-shop img {
     max-width: 100%;
@@ -598,7 +667,30 @@ footer p {
     margin-left: 20px;
 }
 
-/* Menu */
+.about .our-shop h1 {
+    color: var(--main-yellow);
+}
+
+/* Media querry for smaller screen  */
+
+@media (max-width: 912px) {
+    .about .our-shop {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .about .our-shop  h1{
+        font-size: 25px;
+    }
+    
+    .about .our-shop  p{
+        font-size: 14px;
+    }
+}
+
+/*---------------------------------------- Menu ----------------------------------------*/
 
 .menu {
     text-align: center;
@@ -650,11 +742,13 @@ footer p {
 .menu .smoothies-menu
 {
     margin-top: 60px;
+    max-width: 100%;
 }
 
 .menu .row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -664,15 +758,182 @@ footer p {
     margin: 0 90px;
     cursor: pointer;
     transition: .6s ease-in;
+    flex: 1;
 }
 
 .menu .col:hover {
     border: solid 2px var(--main-brown);
     padding: 30px 10px;
     transform: scale(1.1);
+    background-color: var(--main-grouna);
+    opacity: .8 ;
 }
 
 .menu img {
     max-width: 100%;
     height: 300px;
+}
+
+/* Media querry for smaller screen  */
+
+
+@media (max-width: 280px) {
+
+    .menu .menu-buttons {
+        flex-wrap: wrap;
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 414px) {
+    
+    .menu .menu-buttons {
+        padding: 20px 0;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .menu .menu-buttons button {
+        font-size: 14px;
+        padding: 17px 16px;
+    }
+
+    .menu h1 {
+        font-size: 23px;
+    }
+
+    .menu .col {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 912px) {
+    .menu .menu-buttons {
+        padding: 20px 0;
+        margin-top: 40px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu .col {
+        min-width: 300px;
+        margin-top: 40px;
+    }
+}
+
+
+/*---------------------------------------- Contact page ----------------------------------------*/
+
+.contact {
+    background-color: var(--primary-color);
+    padding:30px;
+}
+
+.contact h1, .contact p {
+    color: var(--main-brown);
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+
+.contact .form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact .form form .input,
+.contact .form form .text-area {
+    width: 50%;
+}
+
+.contact .form form .input input,
+.contact .form form .text-area textarea {
+    width: 100%;
+    padding: 20px 10px;
+    margin: 20px 0; 
+    background-color: var(--primary-color);
+    color: var(--main-brown);
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-bottom: solid 1px;
+}
+
+
+.contact .form form .checkbox input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.contact .form form .checkbox label {
+    position: relative;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+    padding-left: 37px;
+}
+
+.contact .form form .checkbox label a {
+    color: var(--main-brown);
+}
+
+.contact .form form .checkbox label::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--main-brown);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--main-grouna);
+}
+
+.contact .form form .checkbox input:checked + label::after,
+.contact .form form .checkbox input:not(:checked):hover + label::after
+
+{
+    content: "";
+    background-color: var(--main-brown);
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: 6.5px;
+    top: 1px;
+}
+
+.contact .form form .checkbox input:not(:checked):hover + label::after {
+    opacity: .5;
+}
+
+.contact .form form button {
+    background-color: var(--main-grouna);
+    opacity: 0.5;
+    padding: 14px 70px;
+    color: var(--secondary-color);
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 24px;
+    cursor: pointer;
+    border: 2px solid var(--main-brown);
+    transition: .4s;
+}
+
+.contact .form form button:hover {
+    background-color: var(--main-brown);
+    opacity: 0.8;
+    color: white;
+}
+
+@media (max-width: 375px) {
+
+    .contact .form form .checkbox label::before {
+        top: 18%;
+    }
 }

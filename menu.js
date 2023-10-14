@@ -9,7 +9,6 @@ const menuItems = [
     document.querySelector(".smoothies-menu")
 ]
 
-
 buttons.forEach( (element,index) => {
     element.addEventListener("click", () => {
 
